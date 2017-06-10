@@ -51,7 +51,7 @@ export default class ReactTextCollapse extends Component {
                   style={{
                     display: `block`,
                     overflow: `hidden`,
-                    height: h,
+                    height: h
                   }}>
                 {children}
               </div>
