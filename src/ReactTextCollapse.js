@@ -1,10 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import { Motion, spring } from "react-motion";
 
 export default class ReactTextCollapse extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    options: PropTypes.object.isRequired
+    options: PropTypes.object.isRequired,
+    onClick: PropTypes.func,
   };
 
   constructor(props) {
@@ -30,6 +32,7 @@ export default class ReactTextCollapse extends Component {
     let { collapse } = this.state;
     collapse = !collapse;
     this.setState({ collapse});
+    this.props.onClick(collapse)
   }
 
   render() {
@@ -47,7 +50,7 @@ export default class ReactTextCollapse extends Component {
                   style={{
                     display: `block`,
                     overflow: `hidden`,
-                    height: `${h}`
+                    height: h,
                   }}>
                 {children}
               </div>
