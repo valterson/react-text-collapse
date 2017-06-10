@@ -7,6 +7,7 @@ export default class ReactTextCollapse extends Component {
     children: PropTypes.node.isRequired,
     options: PropTypes.object.isRequired,
     onClick: PropTypes.func,
+    collapseTextStyles: PropTypes.object,
   };
 
   constructor(props) {
@@ -19,12 +20,12 @@ export default class ReactTextCollapse extends Component {
   }
 
   renderHelperText() {
-    const { options: { collapseText, expandText } } = this.props; 
+    const { options: { collapseText, expandText, collapseTextStyles } } = this.props; 
     const { collapse } = this.state;
     if (collapse) {
-      return <div style={{float:'left'}}>{collapseText}</div>
+      return <div style={{float:'left', ...collapseTextStyles}}>{collapseText}</div>
     } else {
-      return <div style={{float:'left'}}>{expandText}</div>
+      return <div style={{float:'left', ...collapseTextStyles}}>{expandText}</div>
     }
   }
 
