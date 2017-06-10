@@ -20,12 +20,12 @@ export default class ReactTextCollapse extends Component {
   }
 
   renderHelperText() {
-    const { options: { collapseText, expandText, collapseTextStyles } } = this.props; 
+    const { options: { collapseText, expandText } } = this.props; 
     const { collapse } = this.state;
     if (collapse) {
-      return <div style={{float:'left', ...collapseTextStyles}}>{collapseText}</div>
+      return <div style={{float: 'left'}}>{collapseText}</div>
     } else {
-      return <div style={{float:'left', ...collapseTextStyles}}>{expandText}</div>
+      return <div style={{float: 'left'}}>{expandText}</div>
     }
   }
 
@@ -38,7 +38,7 @@ export default class ReactTextCollapse extends Component {
 
   render() {
     const { children } = this.props;
-    const { minHeight, maxHeight } = this.props.options;
+    const { minHeight, maxHeight, collapseTextStyles } = this.props.options;
     const { collapse } = this.state;
     return (
       <Motion
@@ -55,7 +55,7 @@ export default class ReactTextCollapse extends Component {
                   }}>
                 {children}
               </div>
-              <div onClick={this.toggleAction.bind(this)}>{this.renderHelperText()}</div>
+              <div style={collapseTextStyles} onClick={this.toggleAction.bind(this)}>{this.renderHelperText()}</div>
             </div>
           )
         }
