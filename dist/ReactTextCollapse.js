@@ -79,7 +79,8 @@ var ReactTextCollapse = function (_Component) {
       var children = this.props.children;
       var _props$options2 = this.props.options,
           minHeight = _props$options2.minHeight,
-          maxHeight = _props$options2.maxHeight;
+          maxHeight = _props$options2.maxHeight,
+          collapseTextStyles = _props$options2.collapseTextStyles;
       var collapse = this.state.collapse;
 
       return _react2.default.createElement(
@@ -104,7 +105,7 @@ var ReactTextCollapse = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { onClick: _this2.toggleAction.bind(_this2) },
+              { style: collapseTextStyles, onClick: _this2.toggleAction.bind(_this2) },
               _this2.renderHelperText()
             )
           );
@@ -119,7 +120,8 @@ var ReactTextCollapse = function (_Component) {
 ReactTextCollapse.propTypes = {
   children: _propTypes2.default.node.isRequired,
   options: _propTypes2.default.object.isRequired,
-  onClick: _propTypes2.default.func
+  onClick: _propTypes2.default.func,
+  collapseTextStyles: _propTypes2.default.object
 };
 exports.default = ReactTextCollapse;
 //# sourceMappingURL=ReactTextCollapse.js.map
