@@ -23,9 +23,9 @@ export default class ReactTextCollapse extends Component {
     const { options: { collapseText, expandText } } = this.props; 
     const { collapse } = this.state;
     if (collapse) {
-      return <div style={{ display: 'inline-block' }}>{collapseText}</div>
+      return <div>{collapseText}</div>
     } else {
-      return <div style={{ display: 'inline-block' }}>{expandText}</div>
+      return <div>{expandText}</div>
     }
   }
 
