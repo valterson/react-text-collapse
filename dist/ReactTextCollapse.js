@@ -51,13 +51,13 @@ var ReactTextCollapse = function (_Component) {
       if (collapse) {
         return _react2.default.createElement(
           'div',
-          { style: { float: 'left' } },
+          { style: { display: 'inline-block' } },
           collapseText
         );
       } else {
         return _react2.default.createElement(
           'div',
-          { style: { float: 'left' } },
+          { style: { display: 'inline-block' } },
           expandText
         );
       }
