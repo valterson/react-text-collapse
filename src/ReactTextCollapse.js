@@ -8,6 +8,7 @@ export default class ReactTextCollapse extends Component {
     options: PropTypes.object.isRequired,
     onClick: PropTypes.func,
     collapseTextStyles: PropTypes.object,
+    className: PropTypes.string,
   };
 
   constructor(props) {
@@ -46,7 +47,7 @@ export default class ReactTextCollapse extends Component {
         style={{h: spring(collapse ? minHeight : maxHeight)}}>
         {
           ({h}) => (
-            <div>
+            <div className={this.props.className}>
               <div 
                   style={{
                     display: `block`,

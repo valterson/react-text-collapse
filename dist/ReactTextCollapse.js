@@ -92,7 +92,7 @@ var ReactTextCollapse = function (_Component) {
           var h = _ref.h;
           return _react2.default.createElement(
             'div',
-            null,
+            { className: _this2.props.className },
             _react2.default.createElement(
               'div',
               {
@@ -121,7 +121,8 @@ ReactTextCollapse.propTypes = {
   children: _propTypes2.default.node.isRequired,
   options: _propTypes2.default.object.isRequired,
   onClick: _propTypes2.default.func,
-  collapseTextStyles: _propTypes2.default.object
+  collapseTextStyles: _propTypes2.default.object,
+  className: _propTypes2.default.string
 };
 exports.default = ReactTextCollapse;
 //# sourceMappingURL=ReactTextCollapse.js.map

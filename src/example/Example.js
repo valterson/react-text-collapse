@@ -17,6 +17,7 @@ class App extends Component {
       <div>
         <ReactTextCollapse
           options={TEXT_COLLAPSE_OPTIONS}
+          className="teste"
         >
           <p>
             React text collapse is awesome. React text collapse is awesome.<br />
