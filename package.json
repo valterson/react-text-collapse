@@ -73,6 +73,6 @@
   },
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-motion": "^0.3.1"
+    "react-motion": "^0.5.0"
   }
 }
